@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/greenplum-db/gssapi"
+	gssapi "github.com/DeviaVir/gssapi"
 )
 
 func TestCheckSPNEGONegotiate(t *testing.T) {

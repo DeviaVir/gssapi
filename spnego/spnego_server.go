@@ -8,7 +8,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/greenplum-db/gssapi"
+	gssapi "github.com/DeviaVir/gssapi"
 )
 
 // A ServerNegotiator is an interface that defines minimal functionality for

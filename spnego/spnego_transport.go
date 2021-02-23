@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/greenplum-db/gssapi"
+	gssapi "github.com/DeviaVir/gssapi"
 )
 
 const negotiateScheme = "Negotiate"
