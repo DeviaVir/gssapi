@@ -4,46 +4,6 @@
 
 package gssapi
 
-/*
-#cgo linux LDFLAGS: -ldl
-#cgo freebsd pkg-config: heimdal-gssapi
-
-#include <gssapi/gssapi.h>
-#include <dlfcn.h>
-#include <stdlib.h>
-
-// Name-Types.  These are standardized in the RFCs.  The library requires that
-// a given name be usable for resolution, but it's typically a macro, there's
-// no guarantee about the name exported from the library.  But since they're
-// static, and well-defined, we can just define them ourselves.
-
-// RFC2744-mandated values, mapping from as-near-as-possible to cut&paste
-const gss_OID_desc *_GSS_C_NT_USER_NAME           = & (gss_OID_desc) { 10, "\x2a\x86\x48\x86\xf7\x12\x01\x02\x01\x01" };
-const gss_OID_desc *_GSS_C_NT_MACHINE_UID_NAME    = & (gss_OID_desc) { 10, "\x2a\x86\x48\x86\xf7\x12\x01\x02\x01\x02" };
-const gss_OID_desc *_GSS_C_NT_STRING_UID_NAME     = & (gss_OID_desc) { 10, "\x2a\x86\x48\x86\xf7\x12\x01\x02\x01\x03" };
-const gss_OID_desc *_GSS_C_NT_HOSTBASED_SERVICE_X = & (gss_OID_desc) {  6, "\x2b\x06\x01\x05\x06\x02" };
-const gss_OID_desc *_GSS_C_NT_HOSTBASED_SERVICE   = & (gss_OID_desc) { 10, "\x2a\x86\x48\x86\xf7\x12\x01\x02\x01\x04" };
-const gss_OID_desc *_GSS_C_NT_ANONYMOUS           = & (gss_OID_desc) {  6, "\x2b\x06\x01\x05\x06\x03" };  // original had \01
-const gss_OID_desc *_GSS_C_NT_EXPORT_NAME         = & (gss_OID_desc) {  6, "\x2b\x06\x01\x05\x06\x04" };
-
-// from gssapi_krb5.h: This name form shall be represented by the Object
-// Identifier {iso(1) member-body(2) United States(840) mit(113554) infosys(1)
-// gssapi(2) krb5(2) krb5_name(1)}.  The recommended symbolic name for this
-// type is "GSS_KRB5_NT_PRINCIPAL_NAME".
-const gss_OID_desc *_GSS_KRB5_NT_PRINCIPAL_NAME   = & (gss_OID_desc) { 10, "\x2a\x86\x48\x86\xf7\x12\x01\x02\x02\x01" };
-
-// { 1 2 840 113554 1 2 2 2 }
-const gss_OID_desc *_GSS_KRB5_NT_PRINCIPAL         = & (gss_OID_desc) { 10, "\x2A\x86\x48\x86\xF7\x12\x01\x02\x02\x02" };
-
-// known mech OIDs
-const gss_OID_desc *_GSS_MECH_KRB5                 = & (gss_OID_desc) {  9, "\x2A\x86\x48\x86\xF7\x12\x01\x02\x02" };
-const gss_OID_desc *_GSS_MECH_KRB5_LEGACY          = & (gss_OID_desc) {  9, "\x2A\x86\x48\x82\xF7\x12\x01\x02\x02" };
-const gss_OID_desc *_GSS_MECH_KRB5_OLD             = & (gss_OID_desc) {  5, "\x2B\x05\x01\x05\x02" };
-const gss_OID_desc *_GSS_MECH_SPNEGO               = & (gss_OID_desc) {  6, "\x2b\x06\x01\x05\x05\x02" };
-const gss_OID_desc *_GSS_MECH_IAKERB               = & (gss_OID_desc) {  6, "\x2b\x06\x01\x05\x02\x05" };
-const gss_OID_desc *_GSS_MECH_NTLMSSP              = & (gss_OID_desc) { 10, "\x2b\x06\x01\x04\x01\x82\x37\x02\x02\x0a" };
-
-*/
 import "C"
 
 import (
